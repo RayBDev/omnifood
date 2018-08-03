@@ -5,17 +5,6 @@ header {
     height: 100vh;
 }
 
-h1 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #fff;
-    font-size: 240%;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    word-spacing: 4px;
-  }
-
 .hero-text-box {
     position: absolute;
     width: 1140px;
