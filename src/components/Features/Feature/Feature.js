@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../../../assets/css/grid.css';
+
 const Feature = props => {
     return (
         <div className="col span-1-of-4 box">

@@ -8,14 +8,15 @@ section {
     padding: 80px 0px;
 }
 
+.box {
+    padding: 1%;
+}
+
+/* ----- Paragraphs ----- */
 .long-copy {
     line-height: 145%;
     width: 70%;
     margin-left: 15%;
-}
-
-.box {
-    padding: 1%;
 }
 
 .box p {
