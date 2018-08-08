@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './Meals.css';
+import Meal from './Meal/Meal';
 import img1 from "../../assets/img/1.jpg";
 import img2 from "../../assets/img/2.jpg";
 import img3 from "../../assets/img/3.jpg";
@@ -10,52 +11,54 @@ import img6 from "../../assets/img/6.jpg";
 import img7 from "../../assets/img/7.jpg";
 import img8 from "../../assets/img/8.jpg";
 
+const meals = {
+    meal1: {
+        imageName: img1,
+        imageAlt: "Korean bibimbap with egg and vegetables"
+    },
+    meal2: {
+        imageName: img2,
+        imageAlt: "Simple italian pizza with cherry tomatoes"
+    },
+    meal3: {
+        imageName: img3,
+        imageAlt: "Chicken breast steak with vegetables"
+    },
+    meal4: {
+        imageName: img4,
+        imageAlt: "Autumn pumpkin soup"
+    },
+    meal5: {
+        imageName: img5,
+        imageAlt: "Paleo beef steak with vegetables"
+    },
+    meal6: {
+        imageName: img6,
+        imageAlt: "Healthy baguette with egg and vegetables"
+    },
+    meal7: {
+        imageName: img7,
+        imageAlt: "Burger with cheddar and bacon"
+    },
+    meal8: {
+        imageName: img8,
+        imageAlt: "Granola with cherries and strawberries"
+    }
+}
+
+const mealList = () => {
+    let mealArray = [];
+    for(let meal in meals) {
+        mealArray.push((<Meal key={meals[meal].imageName} img={meals[meal].imageName} alt={meals[meal].imageAlt} />));
+    }
+    return mealArray;
+}
+
 const Meals = props => {
     return (
         <section className="section-meals">
-            <ul className="meals-showcase">
-                <li>
-                    <figure className="meal-photo">
-                        <img src={img1} alt="Korean bibimbap with egg and vegetables" />
-                    </figure>
-                </li>
-                <li>
-                    <figure className="meal-photo">
-                        <img src={img2} alt="Simple italian pizza with cherry tomatoes" />
-                    </figure>
-                </li>
-                <li>
-                    <figure className="meal-photo">
-                        <img src={img3} alt="Chicken breast steak with vegetables" />
-                    </figure>
-                </li>
-                <li>
-                    <figure className="meal-photo">
-                        <img src={img4} alt="Autumn pumpkin soup" />
-                    </figure>
-                </li>
-            </ul>
-            <ul className="meals-showcase">
-                <li>
-                    <figure className="meal-photo">
-                        <img src={img5} alt="Paleo beef steak with vegetables" />
-                    </figure>
-                </li>
-                <li>
-                    <figure className="meal-photo">
-                        <img src={img6} alt="Healthy baguette with egg and vegetables" />
-                    </figure>
-                </li>
-                <li>
-                    <figure className="meal-photo">
-                        <img src={img7} alt="Burger with cheddar and bacon" />
-                    </figure>
-                </li>
-                <li>
-                    <figure className="meal-photo">
-                        <img src={img8} alt="Granola with cherries and strawberries" />
-                    </figure>
-                </li>
+            <ul className="meals-showcase clearfix">
+                {mealList()}
             </ul>
         </section>
     );
