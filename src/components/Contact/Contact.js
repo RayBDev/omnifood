@@ -3,7 +3,6 @@ import axios from 'axios';
 
 import './Contact.css';
 import Input from './Input/Input';
-import Aux from '../../hoc/Aux/Aux.js';
 
 class Contact extends Component{
     state = {
@@ -254,8 +253,6 @@ class Contact extends Component{
                 />
             ));
         }
-
-        const formSuccess = 'Thank You';
 
         let form = null;
         if(!this.state.formSubmitted){

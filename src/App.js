@@ -10,6 +10,7 @@ import Cities from './components/Cities/Cities';
 import Testimonials from './components/Testimonials/Testimonials';
 import Pricing from './components/Pricing/Pricing';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
           <Testimonials />
           <Pricing />
           <Contact />
+          <Footer />
         </Aux>
     );
   }

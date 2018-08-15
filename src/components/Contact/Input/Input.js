@@ -5,7 +5,6 @@ import './Input.css';
 const Input = props => {
     let inputElement = null;
     let invalidMessage = null;
-    let spinner = null;
 
     //Create input elements according to type
     switch(props.inputType) {

@@ -1,0 +1,22 @@
+.logo-facebook,
+.logo-twitter,
+.logo-googleplus,
+.logo-instagram {
+    transition: color 0.2s;
+}
+
+.logo-facebook:hover {
+    color:#3b5998;
+}
+
+.logo-twitter:hover {
+    color: #00aced;
+}
+
+.logo-googleplus:hover{
+    color: #dd4b39;
+}
+
+.logo-instagram:hover{
+    color: #517fa4;
+}

@@ -1,23 +1,55 @@
 import React from 'react';
 
+import './Footer.css';
+
+import NavLinks from './NavLinks/NavLinks';
+import SocialIcons from './SocialIcons/SocialIcons';
+
+const footerLinkData = {
+    linkNames: {
+        link1: 'About Us',
+        link2: 'Blog',
+        link3: 'Press',
+        link4: 'iOS App',
+        link5: 'Android App',
+    }
+};
+
+const socialIconData = {
+    logoNames: {
+        logo1: 'logo-facebook',
+        logo2: 'logo-twitter',
+        logo3: 'logo-googleplus',
+        logo4: 'logo-instagram',
+    }
+};
+
+let navLinks = [];
+let socialIcons = [];
+
+for(let navLink in footerLinkData.linkNames){
+    navLinks.push((
+        <NavLinks key={navLink} linkName={footerLinkData.linkNames[navLink]} />
+    ));
+}
+
+for(let icon in socialIconData.logoNames){
+    socialIcons.push((
+        <SocialIcons key={icon} socialIcon={socialIconData.logoNames[icon]} />
+    ));
+}
+
 const Footer = () => (
     <footer>
         <div className="row">
             <div className="col span-1-of-2">
                 <ul className="footer-nav">
-                    <li><a href="#">About Us    </a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">iOS App</a></li>
-                    <li><a href="#">Android App</a></li>
+                    {navLinks}
                 </ul>
             </div>
             <div className="col span-1-of-2">
                 <ul className="social-links">
-                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                <li><a href="#"><ion-icon name="logo-googleplus"></ion-icon></a></li>
-                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    {socialIcons}
                 </ul>
             </div>
             <div className="row">
