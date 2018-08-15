@@ -88,14 +88,75 @@ a:active {
     margin-bottom: 10px;
 }
 
-.icon-small {
+.icon-small, 
+.icon-small-fail {
     display: inline-block;
     width: 30px;
     text-align: center;
-    color: #e67e22;
     font-size: 120%;
     margin-right: 10px;
     line-height: 120%;
     vertical-align: middle;
     margin-top: -5px;
+}
+
+.icon-small {
+    color: #e67e22;
+}
+
+.icon-small-fail {
+    color: #ff0000;
+}
+
+/*----- Buttons -----*/
+
+.btn:link, 
+.btn:visited,
+input[type=submit],
+button
+ {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit],
+button  {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #cf6d17;
+    cursor: pointer;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit]  {
+    border: 1px solid #cf6d17;
+    cursor: pointer;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #cf6d17;
+    color: #fff;
+    cursor: pointer;
 }
