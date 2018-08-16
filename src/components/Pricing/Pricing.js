@@ -57,7 +57,7 @@ const pricingDetails = {
             icon: 'checkmark'
         },
         feature2: {
-            description: 'Order from 8am to 12pm',
+            description: 'Order 8am to 12pm',
             icon: 'checkmark'
         },
         feature3: {

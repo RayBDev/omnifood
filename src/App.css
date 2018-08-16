@@ -160,3 +160,49 @@ input[type=submit]  {
     color: #fff;
     cursor: pointer;
 }
+
+/* ----- Media Queries -----*/
+
+/* Big Tablets to 1200px (widths smaller than the 1140px row) */
+@media only screen and (max-width: 1200px) {
+    .row { padding: 0 2%; }
+}
+
+
+/* Small Tablet to Big Tablets: 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+    section { padding: 60px 0; }
+    .long-copy {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .icon-small { 
+        margin-right: 5px;
+        width: 17px; 
+    }
+}
+
+
+/* Small Phones to Small Tablets: 481px to 767px */
+@media only screen and (max-width: 767px) {
+    section { padding: 40px 0; }
+    .row { padding: 0 4%; }
+    .col { 
+        width: 100%; 
+        margin: 0 0 4% 0;
+    }
+    h1 { font-size: 180%; }
+    h2 { font-size: 150%; }
+
+    .long-copy {
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+
+
+/* Small Phone: 0 to 480px */
+@media only screen and (max-width: 480px) {
+    section { padding: 30px 0; }
+}

@@ -4,13 +4,15 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   background-color: #fff;
   color: #555;
   font-family: 'Lato', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 .clearfix {zoom: 1}
@@ -20,4 +22,28 @@ html {
   display: block;
   height: 0;
   visibility: hidden;
+}
+
+
+/* Big Tablets to 1200px (widths smaller than the 1140px row) */
+@media only screen and (max-width: 1200px) {
+
+}
+
+
+/* Small Tablet to Big Tablets: 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+  html, body { font-size: 18px; }
+}
+
+
+/* Small Phones to Small Tablets: 481px to 767px */
+@media only screen and (max-width: 767px) {
+  html, body { font-size: 16px; }
+}
+
+
+/* Small Phone: 0 to 480px */
+@media only screen and (max-width: 480px) {
+
 }

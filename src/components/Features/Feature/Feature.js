@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../../assets/css/grid.css';
+import './Feature.css';
 
 const Feature = props => {
     return (

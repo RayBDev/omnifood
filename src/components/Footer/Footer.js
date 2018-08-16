@@ -52,11 +52,11 @@ const Footer = () => (
                     {socialIcons}
                 </ul>
             </div>
-            <div className="row">
-                <p>
-                    Copyright &copy; 2018 by Omnifood. All rights reserved.
-                </p>
-            </div>
+        </div>
+        <div className="row">
+            <p>
+                Copyright &copy; 2018 by Omnifood. All rights reserved.
+            </p>
         </div>
     </footer>
 );

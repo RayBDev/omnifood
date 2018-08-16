@@ -49,3 +49,42 @@
     width: auto;
     margin-right: 10px;
 }
+
+/* Big Tablets to 1200px (widths smaller than the 1140px row) */
+@media only screen and (max-width: 1200px) {
+
+}
+
+
+/* Small Tablet to Big Tablets: 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+    .steps-box:first-child { margin-top: 30px; }
+    .steps-box:last-child { margin-top: 30px; }
+    .works-step { margin-bottom: 40px; }
+    .works-step:last-of-type { margin-bottom: 60px; }
+
+    .app-screen { width: 50%; }
+}
+
+
+/* Small Phones to Small Tablets: 481px to 767px */
+@media only screen and (max-width: 767px) {
+    .steps-box:first-child { text-align: center; }
+    .app-screen { width: 40%; }
+    .works-step { margin-bottom: 20px; }
+    .works-step:last-of-type { margin-bottom: 20px; }
+
+    .works-step div{
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+        padding: 4px;
+        font-size: 120%;
+    }
+}
+
+
+/* Small Phone: 0 to 480px */
+@media only screen and (max-width: 480px) {
+
+}

@@ -31,3 +31,26 @@
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
 }
+
+/* Big Tablets to 1200px (widths smaller than the 1140px row) */
+@media only screen and (max-width: 1200px) {
+
+}
+
+
+/* Small Tablet to Big Tablets: 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+
+}
+
+
+/* Small Phones to Small Tablets: 481px to 767px */
+@media only screen and (max-width: 767px) {
+    .main-nav { display: none; }
+}
+
+
+/* Small Phone: 0 to 480px */
+@media only screen and (max-width: 480px) {
+
+}
