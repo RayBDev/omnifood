@@ -1,18 +1,20 @@
 import React from 'react';
 
-import omnifoodLogo from '../../assets/img/logo-white.png';
+import omnifoodLogoWhite from '../../assets/img/logo-white.png';
+import omnifoodLogoBlack from '../../assets/img/logo.png';
 import './Navigation.css';
 
 const Navigation = props => {
     return (
-        <nav>
+        <nav className={props.stickyNav ? 'sticky' : ''}>
             <div className="row">
-                <img className="logo" src={omnifoodLogo} alt="Omnifood Logo" />
+                <img className="logo" src={omnifoodLogoWhite} alt="Omnifood Logo" />
+                <img className="logo-black" src={omnifoodLogoBlack} alt="Omnifood Logo" />
                 <ul className="main-nav">
-                    <li><a href="#">Food Delivery</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Our cities</a></li>
-                    <li><a href="#">Sign up</a></li>
+                    <li><a href="#features">Food Delivery</a></li>
+                    <li><a href="#steps">How it works</a></li>
+                    <li><a href="#cities">Our cities</a></li>
+                    <li><a href="#pricing">Sign up</a></li>
                 </ul>
             </div>
         </nav>

@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 import Plan from './Plan/Plan';
 import './Pricing.css';
@@ -72,13 +73,14 @@ const pricingDetails = {
     }
 }
 
-const planList = () => {
+const planList = (pricePulse) => {
     let planArray = [];
     for(let plan in pricingDetails) {
         planArray.push((
             <Plan 
                 key={plan}
                 plan={plan} 
+                pricePulse = {pricePulse}
                 totalPrice={pricingDetails[plan].totalPrice} 
                 term={pricingDetails[plan].term}
                 mealPrice={pricingDetails[plan].mealPrice} 
@@ -97,15 +99,17 @@ const planList = () => {
     return planArray;
 }
 
-const Pricing = () => (
-    <section className="section-pricing">
-        <div className="row">
-            <h2>Start eating healthy today</h2>
-        </div>
-        <div className="row">
-            {planList()}
-        </div>
-    </section>
+const Pricing = props => (
+    <ScrollableAnchor id={'pricing'}>
+        <section className="section-pricing">
+            <div className="row">
+                <h2>Start eating healthy today</h2>
+            </div>
+            <div className="row">
+                {planList(props.pricePulse)}
+            </div>
+        </section>
+    </ScrollableAnchor>
 );
 
 export default Pricing;

@@ -1,4 +1,6 @@
 import React from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import {Animated} from "react-animated-css";
 
 import City from './City/City';
 import lisbon from '../../assets/img/lisbon-3.jpg';
@@ -73,14 +75,18 @@ const cityDisplay = () => {
 
 const Cities = props => {
     return (
-        <section className="section-cities">
-            <div className="row">
-                <h2>We're currently in these cities</h2>
-            </div>
-            <div className="row">
-                {cityDisplay()}
-            </div>
-        </section>
+        <ScrollableAnchor id={'cities'}>
+            <Animated animationIn="fadeIn" isVisible={props.cityFade}>    
+            <section className="section-cities">
+                    <div className="row">
+                        <h2>We're currently in these cities</h2>
+                    </div>
+                    <div className="row">
+                        {cityDisplay()}
+                    </div>
+                </section>
+            </Animated>
+        </ScrollableAnchor>
     );
 }
 

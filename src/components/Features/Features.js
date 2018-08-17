@@ -1,4 +1,6 @@
 import React from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import {Animated} from "react-animated-css";
 
 import './Features.css';
 import Feature from './Feature/Feature';
@@ -36,24 +38,28 @@ const features = [
 
 const Features = props => {
     return (
-        <section className="section-features">
-            <div className="row">
-                <h2>Get food fast &mdash; not fast food.</h2>
-                <p className="long-copy">
-                    Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
-                </p>
-            <div className="row">
-                {features.map(feat => (
-                    <Feature 
-                        key={feat.feature.heading}
-                        icon={feat.feature.icon} 
-                        heading={feat.feature.heading}
-                        content={feat.feature.content} 
-                    />   
-                ))}
-            </div>
-            </div>
-        </section>
+        <ScrollableAnchor id={'features'}>    
+            <section className="section-features">
+                <div className="row">
+                    <h2>Get food fast &mdash; not fast food.</h2>
+                    <p className="long-copy">
+                        Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
+                    </p>
+                </div>
+                <Animated animationIn="fadeIn" isVisible={props.featureFade}>
+                    <div className="row">
+                        {features.map(feat => (
+                            <Feature 
+                                key={feat.feature.heading}
+                                icon={feat.feature.icon} 
+                                heading={feat.feature.heading}
+                                content={feat.feature.content} 
+                            />   
+                        ))}
+                    </div>
+                </Animated>
+            </section>
+        </ScrollableAnchor>
     );
 }
 

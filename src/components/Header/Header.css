@@ -1,4 +1,5 @@
 header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('../../assets/img/hero.jpg');
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/img/hero.jpg');
     background-size: cover;
     background-position: center;
@@ -11,7 +12,8 @@ header {
     width: 1140px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 /* Big Tablets to 1200px (widths smaller than the 1140px row) */

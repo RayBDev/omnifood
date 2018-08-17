@@ -2,6 +2,7 @@
 .logo-twitter,
 .logo-googleplus,
 .logo-instagram {
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
