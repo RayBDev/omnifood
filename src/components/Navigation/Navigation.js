@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import omnifoodLogoWhite from '../../assets/img/logo-white.png';
-import omnifoodLogoBlack from '../../assets/img/logo.png';
+import omnifoodLogoWhite from '../../assets/img/logo-white-min.png';
+import omnifoodLogoBlack from '../../assets/img/logo-min.png';
 import './Navigation.css';
 
 class Navigation extends Component {

@@ -2,9 +2,9 @@ import React from 'react';
 
 import './Testimonials.css';
 import Testimonial from './Testimonial/Testimonial';
-import alberto from '../../assets/img/customer-1.jpg';
-import joana from '../../assets/img/customer-2.jpg';
-import milton from '../../assets/img/customer-3.jpg';
+import alberto from '../../assets/img/customer-1-min.jpg';
+import joana from '../../assets/img/customer-2-min.jpg';
+import milton from '../../assets/img/customer-3-min.jpg';
 
 const testimonials = {
     Alberto: {

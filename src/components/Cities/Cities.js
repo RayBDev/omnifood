@@ -3,10 +3,10 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 import {Animated} from "react-animated-css";
 
 import City from './City/City';
-import lisbon from '../../assets/img/lisbon-3.jpg';
-import sanfrancisco from '../../assets/img/san-francisco.jpg';
-import berlin from '../../assets/img/berlin.jpg';
-import london from '../../assets/img/london.jpg';
+import lisbon from '../../assets/img/lisbon-3-min.jpg';
+import sanfrancisco from '../../assets/img/san-francisco-min.jpg';
+import berlin from '../../assets/img/berlin-min.jpg';
+import london from '../../assets/img/london-min.jpg';
 import './Cities.css';
 
 const cities = {

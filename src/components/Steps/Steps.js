@@ -3,9 +3,9 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 import {Animated} from "react-animated-css";
 
 import './Steps.css';
-import phoneImg from '../../assets/img/app-iPhone.png';
+import phoneImg from '../../assets/img/app-iPhone-min.png';
 import appStore from '../../assets/img/download-app.svg';
-import playStore from '../../assets/img/download-app-android.png';
+import playStore from '../../assets/img/download-app-android-min.png';
 
 const Steps = props => {
     return (
