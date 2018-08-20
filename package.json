@@ -2,6 +2,7 @@
   "name": "omnifood",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/RayBDev/omnifood",
   "dependencies": {
     "animate.css": "^3.7.0",
     "axios": "^0.18.0",
