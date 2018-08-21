@@ -1,8 +1,45 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
 
 import './Contact.css';
 import Input from './Input/Input';
+
+
+//Google Maps Settings
+let coords = {}
+
+if ( window.innerWidth > 1080 ) {
+    coords = {
+        showLat: 51.5258541,
+        showLng: 0.05,
+        markerLat: 51.5258541,
+        markerLng: -0.08040660000006028
+    };
+} else if (window.innerWidth >= 900 && window.innerWidth <= 1080) {
+    coords = {
+        showLat: 51.5258541,
+        showLng: 0.01,
+        markerLat: 51.5258541,
+        markerLng: -0.08040660000006028
+    };
+} else if ( window.innerWidth <= 480 ) {
+    coords = {
+        showLat: 51.5258541,
+        showLng: -0.08040660000006028,
+        markerLat: 51.5258541,
+        markerLng: -0.08040660000006028
+    };
+} else {
+    coords = {
+        showLat: 51.5258541,
+        showLng: -0.08040660000006028,
+        markerLat: 51.5258541,
+        markerLng: -0.08040660000006028
+    };
+}
+
+const params = {v: '3.exp', key: 'AIzaSyAXr_phe5FXzypBaSzQmmaF53hMXsayDs8'};
 
 class Contact extends Component{
     state = {
@@ -115,6 +152,7 @@ class Contact extends Component{
         formSubmissionError: false
     }
 
+    //Check if form fields are valid
     checkValidity (value, rules) {
         let isValid = true;
 
@@ -182,8 +220,6 @@ class Contact extends Component{
                 formSubmitted: true
             });
 
-            console.log(this.state);
-
             const url = 'https://omnifood-3b81b.firebaseio.com/contacts.json';
 
             const formData = {
@@ -220,6 +256,7 @@ class Contact extends Component{
         
     }
 
+    //Failed form submission button handler
     tryAgainBtnHandler = () => {
         this.setState({
             formSubmitted: false,
@@ -227,7 +264,20 @@ class Contact extends Component{
         });
     }
 
+    //Google Maps Methods
+    onMapCreated(map) {
+        map.setOptions({
+          disableDefaultUI: true
+        });
+    }
+
+    onDragEnd(e) {
+        console.log('onDragEnd', e);
+    }
+
+
     render() {
+        //Create dynamic input fields
         let inputList = [];
         for(let element in this.state.contactForm){
             inputList.push((
@@ -254,6 +304,7 @@ class Contact extends Component{
             ));
         }
 
+        //Generate form content based on the submission state
         let form = null;
         if(!this.state.formSubmitted){
             form = 
@@ -267,18 +318,37 @@ class Contact extends Component{
         } else {
             form = 
                 <div className="form-submission-message">
-                    <div className="form-submission-message"><ion-icon name="close" class="icon-small-fail"></ion-icon>Somthing went wrong with your form submission.</div>
+                    <div className="form-submission-message"><ion-icon name="close" class="icon-small-fail"></ion-icon>Something went wrong with your form submission.</div>
                     <button className="form-submission-message btn btn-full" onClick={this.tryAgainBtnHandler}>&#8701; Try Again</button>
                 </div>; 
         }
 
         return(
             <section className="section-form">
-                <div className="row">
-                    <h2>We're happy to hear from you</h2>
+                <div className="map-box">
+                    <Gmaps
+                        width={'inherit'}
+                        height={'inherit'}
+                        lat={coords.showLat}
+                        lng={coords.showLng}
+                        zoom={12}
+                        loadingMessage={'Loading Map'}
+                        params={params}
+                        onMapCreated={this.onMapCreated}>
+                        <Marker
+                        lat={coords.markerLat}
+                        lng={coords.markerLng}
+                        draggable={true}
+                        onDragEnd={this.onDragEnd} />
+                    </Gmaps>
                 </div>
-                <div className="row">
-                    {form}
+                <div className="form-box">
+                    <div className="row">
+                        <h2>We're happy to hear from you</h2>
+                    </div>
+                    <div className="row">
+                        {form}
+                    </div>
                 </div>
             </section>
         );

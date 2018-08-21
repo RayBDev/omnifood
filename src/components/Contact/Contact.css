@@ -1,5 +1,29 @@
+.section-form {
+    width: 100%;
+    height: 560px;
+    position: relative;
+    padding: 0;
+}
+
+.map-box {
+    width: 100%;
+    height: 560px;
+    z-index: 0;
+}
+
+.form-box {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255 , 0.9);
+    z-index: 10;
+    height: 560px;
+    padding-top: 40px;
+}
+
 .contact-form {
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -34,6 +58,7 @@ input[type=checkbox] {
     margin-top: 30px;
 }
 
+
 /* Big Tablets to 1200px (widths smaller than the 1140px row) */
 @media only screen and (max-width: 1200px) {
 
@@ -42,17 +67,41 @@ input[type=checkbox] {
 
 /* Small Tablet to Big Tablets: 768px to 1023px */
 @media only screen and (max-width: 1023px) {
-    .contact-form { width: 80%; }
+    .contact-form { width: 90%; }
 }
 
 
 /* Small Phones to Small Tablets: 481px to 767px */
 @media only screen and (max-width: 767px) {
-
+    .section-form {
+        height: 700px;
+    }
+    
+    .map-box {
+        height: 700px;
+    }
+    
+    .form-box {
+        height: 700px;
+    }
 }
 
 
 /* Small Phone: 0 to 480px */
 @media only screen and (max-width: 480px) {
     .contact-form { width: 100%; }
+    .section-form {
+        height: auto;
+    }
+    
+    .map-box {
+        height: 300px;
+    }
+    
+    .form-box {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 40px 0 30px 0;
+    }
 }
