@@ -1,7 +1,9 @@
 <p align="center">
     <img alt="Omnifood Logo" src="https://github.com/RayBDev/omnifood/blob/master/src/assets/img/logo.png" width="100" />
 </p>
-________________________________
+
+_______
+
 
 Omnifood is a premium food delivery company that delivers healthy meals to its subscribers. The website is meant as a gateway to the company's phone app.
 
